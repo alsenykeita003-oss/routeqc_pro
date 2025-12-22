@@ -1,0 +1,25 @@
+import 'package:flutter/material.dart';
+import 'config/theme.dart';
+import 'auth/login_screen.dart';
+import 'screens/dashboard_screen.dart';
+import 'screens/site_create_screen.dart';
+import 'screens/mtq_screen.dart';
+import 'screens/safety_screen.dart';
+
+class RouteQCApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'RouteQC Pro',
+      theme: AppTheme.theme,
+      initialRoute: '/login',
+      routes: {
+        '/login': (context) => LoginScreen(),
+        '/dashboard': (context) => DashboardScreen(),
+        '/create-site': (context) => SiteCreateScreen(),
+        '/mtq': (context) => MTQScreen(),
+        '/safety': (context) => SafetyScreen(),
+      },
+    );
+  }
+}

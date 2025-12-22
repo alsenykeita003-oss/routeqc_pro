@@ -1,0 +1,19 @@
+import 'package:flutter/material.dart';
+
+class SiteCard extends StatelessWidget {
+  final String title;
+  final String status;
+
+  const SiteCard({required this.title, required this.status});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        title: Text(title),
+        subtitle: Text('Statut : $status'),
+        trailing: Icon(Icons.location_on),
+      ),
+    );
+  }
+}

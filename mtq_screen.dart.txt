@@ -1,0 +1,30 @@
+import 'package:flutter/material.dart';
+
+class MTQScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Signalisation MTQ'),
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(16),
+        child: Column(
+          children: [
+            ListTile(
+              leading: Icon(Icons.warning, color: Colors.green),
+              title: Text('Signalisation conforme aux normes MTQ'),
+            ),
+            SizedBox(height: 30),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/safety');
+              },
+              child: Text('Valider et continuer'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

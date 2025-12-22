@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+
+class SafetyScreen extends StatefulWidget {
+  @override
+  _SafetyScreenState createState() => _SafetyScreenState();
+}
+
+class _SafetyScreenState extends State<SafetyScreen> {
+  bool casque = false;
+  bool dossard = false;
+  bool bottes = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Sécurité CNESST'),
+      ),
+      body: Column(
+        children: [
+          CheckboxListTile(
+            title: Text('Casque de sécurité'),
+            value: casque,
+            onChanged: (v) => setState(() => casque = v!),
+          ),
+          CheckboxListTile(
+            title: Text('Dossard haute visibilité'),
+            value: dossard,
+            onChanged: (v) => setState(() => dossard = v!),
+          ),
+          CheckboxListTile(
+            title: Text('Bottes de sécurité'),
+            value: bottes,
+            onChanged: (v) => setState(() => bottes = v!),
+          ),
+        ],
+      ),
+    );
+  }
+}

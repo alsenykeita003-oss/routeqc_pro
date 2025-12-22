@@ -1,0 +1,3 @@
+class LocationService {
+  // Plus tard : GPS / localisation
+}
