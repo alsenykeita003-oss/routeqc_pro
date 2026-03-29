@@ -6,11 +6,11 @@ import 'screens/site_create_screen.dart';
 import 'screens/mtq_screen.dart';
 import 'screens/safety_screen.dart';
 
-class RouteQCApp extends StatelessWidget {
+class GeoCivilApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'RouteQC Pro',
+      title: 'GeoCivil',
       theme: AppTheme.theme,
       initialRoute: '/login',
       routes: {
